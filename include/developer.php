@@ -1,0 +1,1 @@
+<img src="<?=SITE_TEMPLATE_PATH?>/images/apelsin_logo_h50.png" alt="logo" />
