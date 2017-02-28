@@ -24,7 +24,7 @@ bitrix/php_interface/*
 !bitrix/templates
 
 # Отображаем файл .settings.php
-!bitrix/.settings.php
+# !bitrix/.settings.php
 
 # отображаем apls страницы из админки
 !bitrix/admin/
