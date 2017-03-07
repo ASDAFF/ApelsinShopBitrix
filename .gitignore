@@ -4,6 +4,7 @@ Thumbs.db
 /.idea/
 /.git/
 /sitemap*.xml
+/doc.html
 
 /upload/*
 /bitrix/*
