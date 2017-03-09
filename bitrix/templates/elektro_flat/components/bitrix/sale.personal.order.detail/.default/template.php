@@ -179,7 +179,7 @@ if(strlen($arResult["ERROR_MESSAGE"])<=0):?>
 					<tr>
 						<td class="field-name"><?echo $val["NAME"] ?>:</td>
 						<td class="field-value">
-							<?if($val["TYPE"] == "Y/N") {
+							<?if($val["TYPE"] == "CHECKBOX" || $val["TYPE"] == "Y/N") {
 								if($val["VALUE"] == "Y")
 									echo GetMessage("SALE_YES");
 								else
