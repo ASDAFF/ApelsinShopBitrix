@@ -23,7 +23,9 @@ button[disabled] {
 a#to_top i {
     top: 60px !important;
 }
-
+.AplsFullImg {
+    width: 100%;
+}
 .style-switcher,
 .style-switcher > div {
     display: none !important;
@@ -303,62 +305,44 @@ table.Stylized tr td img {
     margin: 5px auto;
     width: 50px;
 }
-
-.NavigatorBigIcon {
-}
-
-.NavigatorBigIcon .NavigatorBigIconElement {
+.NavigatorBigIcon .NavigatorBigIconElementHref {
     float: left;
+    display: block;
     border: 1px solid #dee0ee;
     width: 223px;
     height: 200px;
     text-align: center;
     color: #8184a1;
-}
-
-.NavigatorBigIcon .NavigatorBigIconElement {
+    text-decoration: none;
+    margin: 0px 0px 5px 0px;
     padding: 5px;
 }
-
-.NavigatorBigIcon .NavigatorBigIconElementHref {
-    float: left;
-    margin: 0px 0px 5px 0px;
-}
-
 .NavigatorBigIcon .NavigatorBigIconElementHref:nth-child(4n + 2) {
     margin: 0px 5px 5px 5px;
 }
-
 .NavigatorBigIcon .NavigatorBigIconElementHref:nth-child(4n + 3) {
     margin: 0px 5px 5px 0px;
 }
 
-.NavigatorBigIcon .NavigatorBigIconElement:hover {
+.NavigatorBigIcon .NavigatorBigIconElementHref:hover {
+    padding: 4px;
     border: 2px solid #ef7f1a;
     color: #ef7f1a;
-    padding: 4px;
     cursor: pointer;
 }
-
-.NavigatorBigIcon .NavigatorBigIconElement img {
+.NavigatorBigIcon .NavigatorBigIconElementHref .NavigatorBigIconElement img {
     display: block;
     margin: 20px auto;
     width: 182px;
     height: 122px;
 }
-
-.NavigatorBigIcon .NavigatorBigIconElement img.hover {
+.NavigatorBigIcon .NavigatorBigIconElementHref .NavigatorBigIconElement img.hover,
+.NavigatorBigIcon .NavigatorBigIconElementHref .NavigatorBigIconElement:hover img.main{
     display: none;
 }
-
-.NavigatorBigIcon .NavigatorBigIconElement:hover img.hover {
+.NavigatorBigIcon .NavigatorBigIconElementHref .NavigatorBigIconElement:hover img.hover {
     display: block;
 }
-
-.NavigatorBigIcon .NavigatorBigIconElement:hover img.main {
-    display: none;
-}
-
 .NavigatorBigIcon .NavigatorBigIconElement .title {
     font-size: 16px;
     font-weight: 600;
@@ -387,7 +371,7 @@ table.Stylized tr td img {
 }
 
 #map {
-    width: 960px;
+    width: 100%;
     height: 400px;
 }
 
@@ -1765,8 +1749,7 @@ a.selected:hover, .catalog-item-limit a.selected, .catalog-item-limit a.selected
 
 .FeaturesProductsWrapper .FeaturesProductsTextBlock {
     /*background: #00aa00;*/
-    float: left;
-    width: 888px;
+    margin-left: 40px;
     padding: 3px 10px;
 }
 
@@ -2158,4 +2141,106 @@ ul.left-menu > li > a {
 
 .ServiceCenterSelectBox {
     border: 1px solid orange !important;
+}
+@media (min-width:1014px) and (max-width:1253px){
+    .NavigatorBigIcon .NavigatorBigIconElementHref {
+        margin: 0px 0px 2px 0px;
+    }
+    .NavigatorBigIcon .NavigatorBigIconElementHref:nth-child(3n + 2) {
+        margin: 0px 2px 2px 2px;
+    }
+    .NavigatorBigIcon .NavigatorBigIconElementHref:nth-child(3n + 3) {
+        margin: 0px 2px 2px 0px;
+    }
+    .workarea .ServiceCentersGroup_Column1,
+    .workarea .ServiceCentersGroup_Column2,
+    .workarea .ServiceCentersElement,
+    .VacanciesValidBlockColumn_01,
+    .VacanciesValidBlockColumn_02,
+    .VacanciesValidBlock,
+    .validVacancyAdress,
+    .validVacancyContactInfo{
+        width: 350px;
+    }
+    .validVacancyAdress {
+        padding: 0px;
+    }
+    .validVacancyContactInfo {
+        padding: 0px 0px 5px 0px;
+    }
+}
+@media (min-width:788px) and (max-width:1013px){
+    .NavigatorBigIcon .NavigatorBigIconElementHref {
+        margin: 0px 0px 2px 0px;
+    }
+    .NavigatorBigIcon .NavigatorBigIconElementHref:nth-child(3n + 2) {
+        margin: 0px 2px 2px 2px;
+    }
+    .NavigatorBigIcon .NavigatorBigIconElementHref:nth-child(3n + 3) {
+        margin: 0px 2px 2px 0px;
+    }
+    .workarea .ServiceCentersGroup_Column1,
+    .workarea .ServiceCentersGroup_Column2,
+    .workarea .ServiceCentersElement,
+    .VacanciesValidBlockColumn_01,
+    .VacanciesValidBlockColumn_02,
+    .VacanciesValidBlock,
+    .validVacancyAdress,
+    .validVacancyContactInfo{
+        width: 350px;
+    }
+    .validVacancyAdress {
+        padding: 0px;
+    }
+    .validVacancyContactInfo {
+        padding: 0px 0px 5px 0px;
+    }
+}
+@media screen and (max-width:787px){
+    #feedback-button,
+    .workarea .anythingContainer,
+    .workarea .advantages.lines,
+    .footer_soc_pay {
+        display: none;
+    }
+    .header_1 .logo a img {
+        width: auto;
+        height: 50px;
+    }
+    header {
+        height: auto;
+        margin: 85px 0px 0px 0px;
+        padding: 5px 0px 5px 0px;
+    }
+    .NavigatorBigIcon .NavigatorBigIconElementHref {
+        float: none !important;
+        border: 1px solid #dee0ee;
+        width: 100% !important;
+        height: 200px;
+        text-align: center;
+        color: #8184a1;
+        text-decoration: none;
+        margin: 0px 0px 5px 0px!important;
+        padding: 0px!important;
+    }
+    .NavigatorBigIcon .NavigatorBigIconElementHref:hover {
+        border: 1px solid #ef7f1a;
+    }
+
+    .workarea .ServiceCentersGroup_Column1,
+    .workarea .ServiceCentersGroup_Column2,
+    .workarea .ServiceCentersElement,
+    .VacanciesValidBlockColumn_01,
+    .VacanciesValidBlockColumn_02,
+    .VacanciesValidBlock,
+    .validVacancyAdress,
+    .validVacancyContactInfo{
+        width: 100%;
+    }
+    .validVacancyAdress {
+        padding: 0px;
+    }
+    .validVacancyContactInfo {
+        padding: 0px 0px 5px 0px;
+    }
 }

@@ -212,7 +212,7 @@ else
 												<tr>
 													<td class="field-name"><?=$orderProps["NAME"]?>:</td>
 													<td class="field-value">
-														<?if($orderProps["TYPE"] == "CHECKBOX") {
+														<?if($orderProps["TYPE"] == "CHECKBOX" || $orderProps["TYPE"] == "Y/N") {
 															if($orderProps["VALUE"] == "Y")
 																echo GetMessage("STPOL_YES");
 															else
