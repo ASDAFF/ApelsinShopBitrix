@@ -6,7 +6,7 @@ define("SHOP_IBLOC_ID_FOR_THIS_SCRIPT", "13");
 define("ACTIVE_TRIGGER_PROPERTY_XML_ID", "26e05687-c602-4c36-8b63-debb1b4e0250");
 define("ACTIVE_TRIGGER_PROPERTY_VALUE_DEACTIVE", "Нет");
 define("ACTIVE_TRIGGER_PROPERTY_VALUE_ACTIVE", "Да");
-define("SITE_DEL_SECTION_XML_ID","98557c36-f99a-11e6-80ec-00155dfef48aa");
+define("SITE_DEL_SECTION_XML_ID","98557c36-f99a-11e6-80ec-00155dfef48a");
 
 if(CModule::IncludeModule("iblock")) {
     $rs = CIBlockSection::GetList(array(), array("XML_ID"=>SITE_DEL_SECTION_XML_ID), false, array("nTopCount"=>1));
