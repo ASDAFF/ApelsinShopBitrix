@@ -68,5 +68,19 @@
 		Array(),
 		Array(),
 		""
-	)
+	),
+    Array(
+        "Пользовательское соглашение",
+        "/payments/terms_of_use/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Обработка персональных данных",
+        "/payments/processing_of_personal_data/",
+        Array(),
+        Array(),
+        ""
+    )
 );?>
