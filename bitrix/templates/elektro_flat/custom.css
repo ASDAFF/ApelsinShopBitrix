@@ -923,6 +923,13 @@ table.Stylized tr td img {
     font-size: 12px;
     color: #a0a4bc;
 }
+/* Сервисные центры карта товара*/
+.elementServiceCenter {
+    color: #575b71;
+}
+.elementServiceCenterText {
+    color: #8184a1;
+}
 
 /**********************/
 /*  ИЗМЕНЕНИЯ СТИЛЕЙ  */
