@@ -101,6 +101,7 @@ $templateData["JS_OBJ"] = $strObName;
 <?$sticker = "";
 $timeBuy = "";
 if(array_key_exists("PROPERTIES", $arResult) && is_array($arResult["PROPERTIES"])):
+    include_once $_SERVER["DOCUMENT_ROOT"]."/apls_lib/catalog/APLS_CatalogItemLabels.php";
 	$catalogItemLabels = new APLS_CatalogItemLabels($arResult);
 	$sticker .= $catalogItemLabels->getHTML();
 //	/***NEW***/

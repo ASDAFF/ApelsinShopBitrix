@@ -71,6 +71,7 @@ if(!empty($arResult["ITEMS"])):
 					$timeBuy = "";
 					$class = "";
 					if(array_key_exists("PROPERTIES", $arItem) && is_array($arItem["PROPERTIES"])):
+                        include_once $_SERVER["DOCUMENT_ROOT"]."/apls_lib/catalog/APLS_CatalogItemLabels.php";
                         $catalogItemLabels = new APLS_CatalogItemLabels($arElement);
                         $sticker .= $catalogItemLabels->getHTML();
 //						/***NEW***/

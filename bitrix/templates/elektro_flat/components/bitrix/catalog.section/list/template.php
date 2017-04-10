@@ -17,6 +17,7 @@ if(count($arResult["ITEMS"]) > 0):
 				$timeBuy = "";
 				$class = "";
 				if(array_key_exists("PROPERTIES", $arElement) && is_array($arElement["PROPERTIES"])):
+                    include_once $_SERVER["DOCUMENT_ROOT"]."/apls_lib/catalog/APLS_CatalogItemLabels.php";
 					$catalogItemLabels = new APLS_CatalogItemLabels($arElement);
 					$sticker .= $catalogItemLabels->getHTML();
 //					/***NEW***/
