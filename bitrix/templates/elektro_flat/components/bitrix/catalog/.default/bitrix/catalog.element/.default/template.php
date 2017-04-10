@@ -1104,7 +1104,7 @@ endif;
                 /*** Сервисные центры в карте товара (наши)***/
                 include_once $_SERVER["DOCUMENT_ROOT"].'/apls_lib/catalog/APLS_CatalogItemDetailsServiceCenters.php';
                 $APLS_ServiceCenters = new APLS_CatalogItemDetailsServiceCenters($arResult["PROPERTIES"]["Servis"]["VALUE"]);
-                $APLS_ServiceCenters->getServiceCenters();
+                $APLS_ServiceCenters->get();
 
 				?>
 			</div>
