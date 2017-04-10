@@ -77,10 +77,10 @@ class APLS_CatalogItemLabels
 
 	private function generationHtml()
 	{
-		$this->html = $this->genLabelYN(self::NEW_PRODUCT);
-		$this->html .= $this->genLabelYN(self::SALE_LEADER);
-		$this->html .= $this->genLabelYN(self::STOCK,true);
-		$this->html .= $this->genLabelOffesr(self::DISCOUNT);
+		$this->html = $this->genLabelYN(self::NEW_PRODUCT,false);
+		$this->html .= $this->genLabelYN(self::SALE_LEADER,false);
+		$this->html .= $this->genLabelYN(self::STOCK,false);
+		$this->html .= $this->genLabelOffesr(self::DISCOUNT,false);
 	}
 
 	private function genLabelYN($key, $anyValue = false)
