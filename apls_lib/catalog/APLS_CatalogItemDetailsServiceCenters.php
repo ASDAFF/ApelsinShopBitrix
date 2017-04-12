@@ -79,16 +79,16 @@ class APLS_CatalogItemDetailsServiceCenters {
 
     private function getHTMLServiceCenters() {
         $this->html = "";
-        if(empty($this->error)) {
+        if (empty($this->error) && $this->dataServiceCenters["UF_ADRES"] != "" && $this->dataServiceCenters["UF_ADRES"] != null) {
             $this->html .= "<div class='productDetailsWrapper advantages'>";
             $this->html .= "<h3 class='elementServiceCenter'>Сервисный центр</h3>";
-//        $this->html .= "<div class='availableServices'>".$this->dataServiceCenters["UF_NAME"]."</div>";
+//            $this->html .= "<div class='availableServices'>".$this->dataServiceCenters["UF_NAME"]."</div>";
             $this->html .= "<div class=' elementServiceCenterText'>";
-//        $this->html .= $this->dataServiceCenters["UF_ADRES"];
+//            $this->html .= $this->dataServiceCenters["UF_ADRES"];
             $this->html .= $this->getStringText($this->dataServiceCenters["UF_ADRES"]);
             $this->html .= "</div>";
             $this->html .= "<div class=' elementServiceCenterText'>";
-//        $this->html .= $this->GetUnitsIMG();
+//            $this->html .= $this->GetUnitsIMG();
             $this->html .= "</div>";
             $this->html .= "</div>";
         }
