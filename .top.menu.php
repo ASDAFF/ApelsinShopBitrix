@@ -29,22 +29,8 @@ $aMenuLinks = Array(
 		""
 	),
 	Array(
-		"Услуги",
-		"/service/",
-		Array(),
-		Array(),
-		""
-	),
-	Array(
 		"Информация",
 		"/information/",
-		Array(),
-		Array(),
-		""
-	),
-	Array(
-		"Покупателям",
-		"/customers/",
 		Array(),
 		Array(),
 		""

@@ -1,4 +1,18 @@
 <?$aMenuLinks = Array(
+    Array(
+        "Наши услуги",
+        "service/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Программы лояльности",
+        "loyalty-programs/",
+        Array(),
+        Array(),
+        ""
+    ),
 	Array(
 		"Памятка покупателю", 
 		"customers_memo/", 
