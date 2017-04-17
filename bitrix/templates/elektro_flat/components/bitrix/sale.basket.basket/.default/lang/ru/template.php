@@ -19,6 +19,7 @@ $MESS ['SALE_ITOGO'] = "Итого";
 $MESS ['SALE_COUPON_VAL'] = "Введите купон";
 $MESS ['SALE_UPDATE'] = "Пересчитать";
 $MESS ['SALE_BOC'] = "Быстрый заказ";
+$MESS ['SALE_PRINT'] = "Печать";
 $MESS ['SALE_ORDER'] = "Оформить";
 $MESS ['SALE_ACTION'] = "Действия";
 $MESS ['SALE_ADD_CART'] = "В заказ";

@@ -188,7 +188,8 @@ use Bitrix\Sale\DiscountCouponsManager;?>
 					}?>
 				</div>
 			<?endif;?>							
-			<div class="cart-buttons">				
+			<div class="cart-buttons">
+                <button type="button" name="BasketPrint" id="basketOrderButton2" class="btn_buy popdef bt3" value="<?=GetMessage('SALE_PRINT')?>" onclick="print();"><?=GetMessage("SALE_PRINT")?></button>
 				<button type="button" id="boc_anch_cart" class="btn_buy boc_anch_cart" name="boc_anch_cart" value="<?=GetMessage('SALE_BOC')?>"><?=GetMessage('SALE_BOC')?></button>
 				<button name="BasketOrder" id="basketOrderButton2" class="btn_buy popdef bt3" value="<?=GetMessage('SALE_ORDER')?>" onclick="checkOut();"><?=GetMessage("SALE_ORDER")?></button>
 			</div>

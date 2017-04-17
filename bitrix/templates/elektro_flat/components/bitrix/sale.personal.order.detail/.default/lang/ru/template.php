@@ -16,4 +16,5 @@ $MESS["SPOD_ORDER_SUM_IT"] = "Итого:";
 $MESS["P_ORDER_USER_COMMENT"] = "Комментарий к заказу:";
 $MESS["SALE_REPEAT_ORDER"] = "Повторить заказ";
 $MESS["SALE_CANCEL_ORDER"] = "Отменить заказ";
+$MESS["SALE_PRINT_ORDER"] = "Печать";
 ?>

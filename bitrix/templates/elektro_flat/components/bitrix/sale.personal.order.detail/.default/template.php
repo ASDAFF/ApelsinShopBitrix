@@ -206,6 +206,7 @@ if(strlen($arResult["ERROR_MESSAGE"])<=0):?>
 		<?if($arResult["CAN_CANCEL"]=="Y"):?>
 			<a class="btn_buy apuo order_delete" href="<?=$arResult["URL_TO_CANCEL"]?>" title="<?=GetMessage('SALE_CANCEL_ORDER')?>"><i class="fa fa-times"></i><span><?=GetMessage("SALE_CANCEL_ORDER")?></span></a>
 		<?endif;?>
+        <a class="btn_buy apuo order_print" href="#" title="<?=GetMessage("SALE_PRINT_ORDER")?>" onclick="print();"><i class="fa fa-print"></i><span><?=GetMessage("SALE_PRINT_ORDER")?></span></a>
 		<div class="clr"></div>
 	</div>
 <?else:	
