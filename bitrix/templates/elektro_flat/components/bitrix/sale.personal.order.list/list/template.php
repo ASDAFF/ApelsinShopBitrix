@@ -235,10 +235,12 @@ else
 								</table>
 
 								<div class="order-item-actions <?=$accountHashNumber?>" style="display:none;">
+                                    <!--
 									<a class="btn_buy apuo order_repeat" href="<?=$val['ORDER']['URL_TO_COPY']?>" title="<?=GetMessage('STPOL_REPEAT_ORDER')?>"><i class="fa fa-repeat"></i><span><?=GetMessage("STPOL_REPEAT_ORDER")?></span></a>
 									<?if($val["ORDER"]["CAN_CANCEL"]=="Y"):?>
 										<a class="btn_buy apuo order_delete" href="<?=$val['ORDER']['URL_TO_CANCEL']?>" title="<?=GetMessage('STPOL_CANCEL_ORDER')?>"><i class="fa fa-times"></i><span><?=GetMessage("STPOL_CANCEL_ORDER")?></span></a>
 									<?endif;?>
+									-->
 									<a class="btn_buy apuo order_detail" href="<?=$val['ORDER']['URL_TO_DETAIL']?>" title="<?=GetMessage('STPOL_DETAIL_ORDER')?>"><i class="fa fa-chevron-right"></i><span><?=GetMessage("STPOL_DETAIL_ORDER")?></span></a>
 									<div class="clr"></div>
 								</div>
