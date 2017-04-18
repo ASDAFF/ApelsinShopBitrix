@@ -2075,6 +2075,10 @@ ul.left-menu > li > a {
     text-decoration: underline !important;
     cursor: pointer;
 }
+.tr_into .order-recipient .field-name,
+.body_text .order-recipient .field-name {
+    width: 185px;
+}
 
 /* Кол-во товара на складе */
 #catalog-detail-stores-from .catalog-detail-store {
