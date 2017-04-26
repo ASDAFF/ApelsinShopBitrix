@@ -341,7 +341,7 @@ endif;
 					$APLS_CIDPB->get();
 					include_once $_SERVER["DOCUMENT_ROOT"].'/apls_lib/catalog/APLS_CatalogItemDetailsAction.php';
 					$APLS_Action = new APLS_CatalogItemDetailsAction($arResult["PROPERTIES"]);
-					$APLS_Action->getAction();
+					$APLS_Action->get();
 					?>
 				</div>
 				<div class="column four">

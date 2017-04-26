@@ -1,46 +1,68 @@
 <?php
 class APLS_CatalogItemDetailsAction {
 
-	private $property = array();
 	private $html = "";
-	private $yesValue = array("true", "Y", "Да");
-	private $noValue = array("false", "N", "Нет");
+    private $promoFields = array();
+    private $promoTitle = "";
+    private $promoText = "";
+    private $promoImg = "";
+    private $promoUrl = "";
 
 	const STOCK = "PROMO"; // внешний код иконки "Акция"
 	const PROMO_TEXT = "PROMO_TEXT"; // внешние код текста акций
+    const IBLOCK_ID = "18"; // внешний код иконки "Акция"
+    const YES_VALUE = array("true", "Y", "Да");
 
 	public function __construct(array $property) {
-		$this->property = $property;
+        if (isset($property[self::PROMO_TEXT]["VALUE"]) && $property[self::PROMO_TEXT]["VALUE"] != "" &&
+            (in_array($property[self::STOCK]["VALUE"], self::YES_VALUE))) {
+            $this->promoTitle = $property[self::PROMO_TEXT]["VALUE"];
+            $this->getPromoData();
+        }
 	}
 
-	public function getAction() {
-		if (CModule::IncludeModule('iblock')) {
-			$this->getIssetAction();
-			$this->get();
-		}
+	private function getPromoData() {
+        $arSelect = Array("PREVIEW_TEXT", "PREVIEW_PICTURE", "DETAIL_PAGE_URL");
+        $arFilter = Array("IBLOCK_ID"=>self::IBLOCK_ID, "=NAME"=>$this->promoTitle, "ACTIVE_DATE"=>"Y", "ACTIVE"=>"Y");
+        $res = CIBlockElement::GetList(Array(),$arFilter,false,false,$arSelect);
+        while($ob = $res->GetNextElement())
+        {
+            $this->promoFields = $ob->GetFields();
+            if(isset($this->promoFields["PREVIEW_TEXT"])) {
+                $this->promoText = $this->promoFields["PREVIEW_TEXT"];
+            }
+            if(isset($this->promoFields["DETAIL_PAGE_URL"])) {
+                $this->promoUrl = $this->promoFields["DETAIL_PAGE_URL"];
+            }
+            if(isset($this->promoFields["PREVIEW_PICTURE"])) {
+                $this->promoImg = CFile::GetPath($this->promoFields["PREVIEW_PICTURE"]);
+            }
+        }
+        $this->generateHtml();
+    }
 
-	}
+    private function generateHtml() {
+	    if($this->promoTitle != "") {
+            $this->html .= "<div class='CatalogItemPromo'>";
+            $this->html .= "<i class='fa fa-scissors CatalogItemPromoIcon'></i>";
+            $this->html .= "<div class='CatalogItemPromoData'>";
+            $this->html .= "<div class='CatalogItemPromoTitle'>".$this->promoTitle."</div>";
+            if($this->promoText != "") {
+                $this->html .= "<div class='CatalogItemPromoText'>".$this->promoText."</div>";
+            }
+            if($this->promoUrl != "") {
+                $this->html .= "<a class='content_button btn_buy apuo show_promo' href='" . $this->promoUrl . "'>подробнее об акции</a>";
+            }
+            $this->html .= "</div>";
+            $this->html .= "</div>";
+        }
+    }
 
-	private function getIssetAction() {
-		if (isset($this->property[self::STOCK]["VALUE"]) && $this->property[self::STOCK]["VALUE"] != "" &&
-			in_array($this->property[self::STOCK]["VALUE"], $this->yesValue)) {
-			$this->html = $this->getTextAction();
-		}
-	}
-
-	private function getTextAction() {
-		if (isset($this->property["PROMO_TEXT"]["VALUE"]) && $this->property["PROMO_TEXT"]["VALUE"] != "" &&
-			!(in_array($this->property[self::STOCK]["VALUE"], $this->noValue))) {
-			$html = "<div class='catalog-detail-preview-text'>" . $this->property["PROMO_TEXT"]["VALUE"] . "</div>";
-		}
-		return $html;
-	}
-
-	private function get() {
+    public function get() {
 		echo $this->html;
 	}
 
-	private function getHtml() {
+    public function getHtml() {
 		return $this->html;
 	}
 }
