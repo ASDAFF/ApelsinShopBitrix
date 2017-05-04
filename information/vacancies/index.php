@@ -10,7 +10,7 @@ $APPLICATION->SetTitle("Вакансии");
 <p class="TextP">Для получения более подробной информации об открытых предложениях звоните 8(4912)240-220,8(4912)502-020, 
 либо по телефонам, указанным напротив конкретной вакансии.</p>
 
-<a class="content_button btn_buy apuo send_rezume" href="mailto:info@apelsin.ru">
+<a class="content_button btn_buy apuo send_rezume" href="mailto:mail@apelsin.ru">
 <span class="cont">
 <i class="fa fa-file"></i>
 <span class="text">Отправить резюме</span>
