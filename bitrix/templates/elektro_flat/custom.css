@@ -945,6 +945,14 @@ table.Stylized tr td img {
 .CatalogItemPromo a.show_promo:hover {
     color: #FFFFFF;
 }
+.catalog-detail-property-info-text {
+    float: left;
+    font-size: 9px;
+    margin-top: 10px;
+}
+.catalog-detail-property-info-text .catalog-detail-property-info-text-element {
+    padding: 3px 0px;
+}
 
 /*Реквизиты товара*/
 .productDetails {

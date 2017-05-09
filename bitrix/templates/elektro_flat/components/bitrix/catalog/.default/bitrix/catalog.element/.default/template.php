@@ -1087,8 +1087,12 @@ endif;
 									<span class="name"><?=$v["NAME"]?></span> 
 									<span class="val"><?=is_array($v["DISPLAY_VALUE"]) ? implode(", ", $v["DISPLAY_VALUE"]) : $v["DISPLAY_VALUE"];?></span>
 								</div>
-							<?endforeach;
-						endif;
+                            <?endforeach;?>
+                            <div class="catalog-detail-property-info-text">
+                                <div class="catalog-detail-property-info-text-element"><?=GetMessage("CATALOG_ELEMENT_PROPERTIES_INFO_TEXT_1")?></div>
+                                <div class="catalog-detail-property-info-text-element"><?=GetMessage("CATALOG_ELEMENT_PROPERTIES_INFO_TEXT_2")?></div>
+                            </div>
+                        <?endif;
 						/***OFFERS_PROPERTIES***/
 						if(!empty($sPropOffers)):
 							foreach($sPropOffers as $keySProp => $sPropOffer):?>

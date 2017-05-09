@@ -43,4 +43,6 @@ $MESS["CATALOG_ELEMENT_SIZE_GB"] = "Гб";
 $MESS["CATALOG_ELEMENT_ADDITEMINCART_TITLE"] = "Товар добавлен в корзину";
 $MESS["CATALOG_ELEMENT_ADDITEMINCART_BTN_CLOSE"] = "Продолжить";
 $MESS["CATALOG_ELEMENT_ADDITEMINCART_BTN_ORDER"] = "Оформить заказ";
+$MESS["CATALOG_ELEMENT_PROPERTIES_INFO_TEXT_1"] = "Характеристики, комплект поставки и внешний вид данного товара могут отличаться от указанных или могут быть изменены производителем без отображения в каталоге магазина АПЕЛЬСИН";
+$MESS["CATALOG_ELEMENT_PROPERTIES_INFO_TEXT_2"] = "Информация о ценах товара и комплектации указанная на сайте не является офертой в смысле, определяемом положениями ст. 435 Гражданского Кодекса РФ.";
 ?>
