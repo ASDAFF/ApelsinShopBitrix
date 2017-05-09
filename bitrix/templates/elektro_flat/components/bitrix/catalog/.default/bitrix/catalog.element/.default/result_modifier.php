@@ -273,6 +273,14 @@ if($arSection = $rsSections->Fetch()) {
 }
 
 /***FILES_DOCS***/
+var_dump($arResult["PROPERTIES"]["FILES_DOCS"]["VALUE"]);
+if(is_array($arResult["PROPERTIES"]["FILES"]["VALUE"]) && count($arResult["PROPERTIES"]["FILES"]["VALUE"]) > 0):
+    if(is_array($arResult["PROPERTIES"]["FILES_DOCS"]["VALUE"]) && count($arResult["PROPERTIES"]["FILES_DOCS"]["VALUE"]) > 0):
+        $arResult["PROPERTIES"]["FILES_DOCS"]["VALUE"] = array_merge($arResult["PROPERTIES"]["FILES_DOCS"]["VALUE"], $arResult["PROPERTIES"]["FILES"]["VALUE"]);
+    else:
+        $arResult["PROPERTIES"]["FILES_DOCS"] = $arResult["PROPERTIES"]["FILES"];
+    endif;
+endif;
 if(is_array($arResult["PROPERTIES"]["FILES_DOCS"]["VALUE"]) && count($arResult["PROPERTIES"]["FILES_DOCS"]["VALUE"]) > 0):
 	foreach($arResult["PROPERTIES"]["FILES_DOCS"]["VALUE"] as $key => $arDocId):
 		$arDocFile = CFile::GetFileArray($arDocId);
