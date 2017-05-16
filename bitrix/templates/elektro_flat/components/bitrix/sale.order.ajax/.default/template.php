@@ -126,6 +126,8 @@ CJSCore::Init(array('fx', 'popup', 'window', 'ajax'));?>
 				function APLS_updateDeleveryFormInput() {
 					APLS_checkAdresInput();
 					APLS_checkDeleveryServise();
+                    // проброс километрожа
+                    $( "#ORDER_PROP_36" ).val($( "input[name*='DELIVERY_EXTRA_SERVICES[9][9]']").val());
 					if($("input").is("#ORDER_PROP_21")) {
 						$("#apls_adress_map").show();
 						ymaps.ready(init);

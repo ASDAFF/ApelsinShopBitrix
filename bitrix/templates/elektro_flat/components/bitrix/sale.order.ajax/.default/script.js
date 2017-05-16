@@ -444,3 +444,10 @@ BX.saleOrderAjax = { // bad solution, actually, a singleton at the page
 	}
 
 }
+
+/* проброс километража */
+$( document ).ready(function() {
+    $( "input[name*='DELIVERY_EXTRA_SERVICES[9][9]']").keyup(function() {
+        $( "#ORDER_PROP_36" ).val($( "input[name*='DELIVERY_EXTRA_SERVICES[9][9]']").val());
+    });
+});
