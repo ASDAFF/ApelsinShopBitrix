@@ -6,6 +6,8 @@ function includeSistemClasses($path = './') {
 	include_once $path.'apls_lib/main/textgenerator/ID_GENERATOR.php';
 	include_once $path.'apls_lib/main/textgenerator/APLS_TextGenerator.php';
 
+    include_once $path.'apls_lib/main/users/UpdateUserMain.php';
+
 	include_once $path.'apls_lib/contacts/ContactsMain.php';
 	include_once $path.'apls_lib/contacts/DataRegionsShop.php';
 	include_once $path.'apls_lib/contacts/DisplayPageContactsShop.php';

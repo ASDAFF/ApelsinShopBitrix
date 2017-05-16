@@ -11,5 +11,5 @@ AddEventHandler("main", "OnAfterUserUpdate", "OnAfterUserUpdateHandler");
 
 function OnAfterUserUpdateHandler (&$arFields) {
 	$update = new DoItAfterUpdateUser($arFields);
-	$update->updateUser();
+    $update->executeUpdate();
 }

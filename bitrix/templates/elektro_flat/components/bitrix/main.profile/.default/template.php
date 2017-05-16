@@ -10,9 +10,11 @@
 	if($arResult["arUser"]["UF_MESSAGE_ERROR"] != null && $arResult["arUser"]["UF_MESSAGE_ERROR"] != "") {
 		if ($arResult["arUser"]["UF_MESSAGE_ERROR"] == "error") {
 			echo ShowNote(GetMessage('MESSAGE_ERROR'));
-		} elseif ($arResult["arUser"]["UF_MESSAGE_ERROR"] == "error1") {
-			echo ShowNote(GetMessage('MESSAGE_ERROR_1'));
-		}
+		} elseif ($arResult["arUser"]["UF_MESSAGE_ERROR"] == "error2") {
+			echo ShowNote(GetMessage('MESSAGE_ERROR_2'));
+		}elseif ($arResult["arUser"]["UF_MESSAGE_ERROR"] == "error1") {
+            echo ShowNote(GetMessage('MESSAGE_ERROR_1'));
+        }
 	}
 ?>
 <div class="workarea personal">

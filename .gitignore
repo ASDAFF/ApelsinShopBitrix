@@ -37,3 +37,7 @@ bitrix/admin/*
 !bitrix/modules/
 bitrix/modules/*
 !bitrix/modules/rbs.payment/
+
+
+
+/test/*
