@@ -172,8 +172,10 @@ if(strlen($arResult["ERROR_MESSAGE"])<=0):?>
 		<?if(!empty($arResult["ORDER_PROPS"])) {
 			foreach($arResult["ORDER_PROPS"] as $val) {
 				if (
-					$val["NAME"] != "Тип цен клиента" &&
-					!($val["NAME"] == "Наличие лифта" && $val["VALUE"] == "Нет лифта")
+                    $val["ID"] != "32" && // Тип цен клиента
+                    !($val["ID"] == "28" && $val["VALUE"] == "Нет лифта") && // Наличие лифта
+                    !($val["ID"] == "34" && $val["VALUE"] == "N") && // Ко времени
+                    !($val["ID"] == "33" && $val["VALUE"] == "N") // Подъем
 				) {
 					?>
 					<tr>

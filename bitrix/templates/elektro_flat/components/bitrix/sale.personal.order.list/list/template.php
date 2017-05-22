@@ -199,14 +199,13 @@ else
 								</div>
 
 								<table class="order-recipient <?=$accountHashNumber?>" style="display:none;">
-									<?if(!empty($val["ORDER"]["ORDER_PROPS"])) {										
+									<?if(!empty($val["ORDER"]["ORDER_PROPS"])) {
 										foreach($val["ORDER"]["ORDER_PROPS"] as $orderProps) {
-
-
-
 											if (
-												$orderProps["NAME"] != "Тип цен клиента" &&
-												!($orderProps["NAME"] == "Наличие лифта" && $orderProps["VALUE"] == "Нет лифта")
+											        $orderProps["ID"] != "32" && // Тип цен клиента
+                                                    !($orderProps["ID"] == "28" && $orderProps["VALUE"] == "Нет лифта") && // Наличие лифта
+                                                    !($orderProps["ID"] == "34" && $orderProps["VALUE"] == "N") && // Ко времени
+                                                    !($orderProps["ID"] == "33" && $orderProps["VALUE"] == "N") // Подъем
 											) {
 												?>
 												<tr>
