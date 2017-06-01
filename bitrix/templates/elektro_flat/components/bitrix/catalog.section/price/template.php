@@ -214,7 +214,8 @@ if(count($arResult["ITEMS"]) > 0):
 													</span>
 												<?endif;?>
 												<span class="catalog-item-price<?=($arPrice['DISCOUNT_VALUE'] < $arPrice['VALUE']) ? '-discount' : '';?>">		
-													<?=number_format($arPrice["DISCOUNT_VALUE"], $price["DECIMALS"], $price["DEC_POINT"], $price["THOUSANDS_SEP"]);?>
+													<?//=number_format($arPrice["DISCOUNT_VALUE"], $price["DECIMALS"], $price["DEC_POINT"], $price["THOUSANDS_SEP"]);?>
+                                                    <?=number_format($arPrice["DISCOUNT_VALUE"], 2, $price["DEC_POINT"], $price["THOUSANDS_SEP"]);?>
 													<span><?=$currency?></span>
 													<?if($arSetting["REFERENCE_PRICE"]["VALUE"] == "Y" && !empty($arSetting["REFERENCE_PRICE_COEF"]["VALUE"])):?>
 														<span class="catalog-item-price-reference">
