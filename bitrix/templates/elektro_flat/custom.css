@@ -899,11 +899,9 @@ table.Stylized tr td img {
 /*Каталог*/
 
 /*Карточка товара*/
-.catalog-detail .catalog-detail-preview-text {
-    display: none;
-}
-
-.article_rating .rating {
+.catalog-detail .catalog-detail-preview-text,
+.article_rating .rating,
+.price_buy_detail .payment_methods {
     display: none;
 }
 
