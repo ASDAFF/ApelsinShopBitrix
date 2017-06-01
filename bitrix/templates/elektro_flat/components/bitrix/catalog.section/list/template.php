@@ -292,7 +292,8 @@ if(count($arResult["ITEMS"]) > 0):
 												<meta itemprop="priceCurrency" content="<?=$arPrice["CURRENCY"]?>" />
 											<?else:?>											
 												<span class="catalog-item-price">
-													<?=number_format($arPrice["DISCOUNT_VALUE"], $price["DECIMALS"], $price["DEC_POINT"], $price["THOUSANDS_SEP"]);?>
+													<?//=number_format($arPrice["DISCOUNT_VALUE"], $price["DECIMALS"], $price["DEC_POINT"], $price["THOUSANDS_SEP"]);?>
+                                                    <?=number_format($arPrice["DISCOUNT_VALUE"], 2, $price["DEC_POINT"], $price["THOUSANDS_SEP"]);?>
 													<span class="unit">
 														<?=$currency?>
 														<span><?=(!empty($arElement["CATALOG_MEASURE_NAME"])) ? GetMessage("CATALOG_ELEMENT_UNIT")." ".$arElement["CATALOG_MEASURE_NAME"] : "";?></span>
