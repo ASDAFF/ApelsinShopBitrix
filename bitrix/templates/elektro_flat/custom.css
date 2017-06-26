@@ -1987,8 +1987,10 @@ a.selected:hover, .catalog-item-limit a.selected, .catalog-item-limit a.selected
     display: block;
     margin: 0 auto;
     cursor: pointer;
-    height: 24px;
-    width: 24px;
+    /*height: 24px;*/
+    /*width: 24px;*/
+    height: 30px;
+    width: 30px;
 
 }
 
@@ -2006,11 +2008,13 @@ a.selected:hover, .catalog-item-limit a.selected, .catalog-item-limit a.selected
     position: absolute;
     top: -3px;
     left: 0;
-    width: 22px;
-    height: 22px;
+    /*width: 22px;*/
+    /*height: 22px;*/
+    height: 30px;
+    width: 30px;
     background: #edeef8;
     background: transparent;
-    font: 16px/22px "PT Sans", helvetica, "segoe UI", arial, sans-serif;
+    font: 20px/30px "PT Sans", helvetica, "segoe UI", arial, sans-serif;
     color: #8184a1;
     text-align: center;
 }
@@ -2019,6 +2023,9 @@ a.selected:hover, .catalog-item-limit a.selected, .catalog-item-limit a.selected
     /*display: none;*/
     content: '✔';
     color: #ef7f1a;
+    background: #ef7f1a;
+    color: #FFFFFF;
+    border-radius: 20px;
 }
 
 .radio:focus + label:before {
@@ -2070,6 +2077,12 @@ ul.left-menu > li > a {
 }
 
 /* Мои заказы */
+.tr_into_in_buttom {
+    cursor: pointer;
+}
+.tr_into_in_buttom:hover .cart-item-plus-minus a i {
+    color: #f18c32 !important;
+}
 .cart-items .equipment-order.list .thead .cart-item-status {
     width: 155px;
 }
@@ -2128,7 +2141,22 @@ ul.left-menu > li > a {
     width: 185px;
 }
 
-/* Кол-во товара на складе */
+.btnPrint {
+    display: block;
+    width: 180px !important;
+    line-height: 27px;
+    padding: 5px;
+    margin: 10px;
+}
+a.btnPrint:hover,
+.notetext p a.btnPrint:hover{
+    text-decoration: none !important;
+}
+.btnPrint span {
+    padding-left: 5px;
+}
+
+    /* Кол-во товара на складе */
 #catalog-detail-stores-from .catalog-detail-store {
     border: 1px solid #e0e3e7;
 }

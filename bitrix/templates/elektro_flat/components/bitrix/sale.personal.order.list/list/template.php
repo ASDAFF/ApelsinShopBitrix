@@ -30,8 +30,23 @@ else
 						$accountHashNumber = md5($val["ORDER"]["ACCOUNT_NUMBER"]);?>
 						<div class="tr">
 							<div class="tr_into">
-								<div class="tr_into_in">
+                                <script type="text/javascript">
+                                    $(document).ready(function() {
+                                        $("#tr-into-in-<?=$accountHashNumber?>").click(function() {
+                                            var clickitem = $(this);
+                                            var icon = $("#plus-minus-<?=$accountHashNumber?>");
+                                            if(icon.hasClass("plus")) {
+                                                icon.removeClass().addClass("minus active");
+                                            } else {
+                                                icon.removeClass().addClass("plus");
+                                            }
+                                            $(".cart-items.basket.<?=$accountHashNumber?>, .order-recipient.<?=$accountHashNumber?>, .order-item-actions.<?=$accountHashNumber?>").slideToggle();
+                                        });
+                                    });
+                                </script>
+								<div class="tr_into_in tr_into_in_buttom" id="tr-into-in-<?=$accountHashNumber?>">
 									<div class="cart-item-plus-minus">
+                                        <!--
 										<script type="text/javascript">
 											$(document).ready(function() {
 												$("#plus-minus-<?=$accountHashNumber?>").click(function() {
@@ -45,6 +60,7 @@ else
 												});
 											});
 										</script>
+										-->
 										<a href="javascript:void(0)" id="plus-minus-<?=$accountHashNumber?>" class="plus"><i class="fa fa-plus-circle"></i><i class="fa fa-minus-circle"></i></a>
 									</div>									
 									<div class="cart-item-number-date">
