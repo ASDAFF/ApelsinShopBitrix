@@ -77,7 +77,7 @@
         ""
     ),
     Array(
-        "Обработка персональных данных",
+        "Политика конфиденциальности",
         "/payments/processing_of_personal_data/",
         Array(),
         Array(),
