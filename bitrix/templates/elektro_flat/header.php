@@ -57,6 +57,7 @@ IncludeTemplateLangFile(__FILE__);?>
 	$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/APLS_ContentToColumns.js");
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/jquery.printPage.js");
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/noEnter.js");
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/jquery.maskedinput.min.js");
 	$APPLICATION->ShowHead();?>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">

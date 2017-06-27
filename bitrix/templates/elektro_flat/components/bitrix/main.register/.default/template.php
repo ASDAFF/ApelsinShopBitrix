@@ -18,7 +18,14 @@
 if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
 	die();
 	global $USER_FIELD_MANAGER;
+
 ?>
+<script type="text/javascript">
+    $( document ).ready(function() {
+        $.mask.definitions['h']='[0-9]';
+        $( "input[name*='REGISTER[UF_CARD_NUMBER]").mask("64777hhhhhhh");
+    });
+</script>
 <div class="content-form register-form">
 	<div class="bx-auth-reg">
 
@@ -51,9 +58,12 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
 
 			elseif($arResult["USE_EMAIL_CONFIRMATION"] === "Y"):
 				?>
-				<p><?echo GetMessage("REGISTER_EMAIL_WILL_BE_SENT")?></p>
+				<p><?
+                    $showMessageText = ShowNote(GetMessage('REGISTER_EMAIL_WILL_BE_SENT'));
+                    echo $showMessageText;
+                    ?></p>
 			<?endif?>
-
+            <?if (mb_strlen($showMessageText) < 1 || $showMessageText === null):?>
 			<form method="post" action="<?=POST_FORM_ACTION_URI?>" name="regform" enctype="multipart/form-data">
 				<?
 				if($arResult["BACKURL"] <> ''):
@@ -168,6 +178,11 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
 <!--											<input size="30" type="text" name="REGISTER[--><?//=$FIELD?><!--]" value="--><?//=$arResult["VALUES"][$FIELD]?><!--" />-->
 
 											<div class="form-input">
+                                                <?if ($FIELD == "UF_CARD_NUMBER") :?>
+                                                    <div class="UF_CARD_NUMBER">
+                                                        <img src="<?=SITE_TEMPLATE_PATH?>/images/card.png" alt="Номер карты" title="<?echo GetMessage("UF_CARD_NUMBER_TITLE");?>">
+                                                    </div>
+                                                <?endif;?>
 												<input size="30" type="text" name="REGISTER[<?=$FIELD?>]" value="<?=$arResult["VALUES"][$FIELD]?>" />
 											</div>
 
@@ -186,6 +201,11 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
 													array("HIDE_ICONS"=>"Y")
 												);
 											?><?
+                                            if ($FIELD == "UF_CARD_NUMBER") :?>
+<!--                                                <div class="UF_CARD_NUMBER">-->
+<!--                                                    <img src="--><?//=SITE_TEMPLATE_PATH?><!--/images/card.png" alt="Номер карты" title="--><?//echo GetMessage("UF_CARD_NUMBER_TITLE");?><!--">-->
+<!--                                                </div>-->
+                                            <?endif;
 									}?>
 									</div>
 								</td>
@@ -196,6 +216,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
 					<?if($arResult["USER_PROPERTIES"]["SHOW"] == "Y"):?>
 						<tr><td colspan="2"><?=strlen(trim($arParams["USER_PROPERTY_NAME"])) > 0 ? $arParams["USER_PROPERTY_NAME"] : GetMessage("USER_TYPE_EDIT_TAB")?></td></tr>
 						<?foreach ($arResult["USER_PROPERTIES"]["DATA"] as $FIELD_NAME => $arUserField):?>
+                            <?php var_dump($arUserField);?>
 							<tr><td><?=$arUserField["EDIT_FORM_LABEL"]?>:<?if ($arUserField["MANDATORY"]=="Y"):?><span class="starrequired">*</span><?endif;?></td><td>
 									<?$APPLICATION->IncludeComponent(
 										"bitrix:system.field.edit",
@@ -245,9 +266,11 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
 					</tfoot>
 				</table>
 				<p><?echo $arResult["GROUP_POLICY"]["PASSWORD_REQUIREMENTS"];?></p>
+                <p><span class="starrequired"></span><?=GetMessage("AUTH_REQ_INFO")?></p>
 				<p><span class="starrequired">*</span><?=GetMessage("AUTH_REQ")?></p>
 
 			</form>
+            <?endif?>
 		<?endif?>
 	</div>
 

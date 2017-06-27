@@ -3,3 +3,12 @@ div.bx-auth-reg span.bx-auth-secure {background-color:#FFFAE3; border:1px solid 
 div.bx-auth-reg div.bx-auth-secure-icon {background-image:url(images/sec.png); background-repeat:no-repeat; background-position:center; width:19px; height:18px;}
 div.bx-auth-reg div.bx-auth-secure-unlock {background-image:url(images/sec-unlocked.png);}
 
+.UF_CARD_NUMBER {
+    display: block;
+    height: auto;
+    padding: 10px 0px 15px 0px;
+}
+.UF_CARD_NUMBER img {
+    float: none !important;
+    width: 220px;
+}
