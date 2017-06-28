@@ -62,6 +62,7 @@ include($_SERVER["DOCUMENT_ROOT"].$templateFolder."/props_format.php");?>
 		PrintPropsForm($arResult["ORDER_PROP"]["USER_PROPS_N"], $arParams["TEMPLATE_LOCATION"]);
 		include($_SERVER["DOCUMENT_ROOT"].$templateFolder."/adress_map.php");
 		PrintPropsForm($arResult["ORDER_PROP"]["RELATED"], $arParams["TEMPLATE_LOCATION"]);
+        include($_SERVER["DOCUMENT_ROOT"].$templateFolder."/agreement.php");
 		?>
 	</div>
 </div>
