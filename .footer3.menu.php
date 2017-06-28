@@ -82,5 +82,12 @@
         Array(),
         Array(),
         ""
+    ),
+    Array(
+        "Оферта",
+        "/payments/offer/",
+        Array(),
+        Array(),
+        ""
     )
 );?>
