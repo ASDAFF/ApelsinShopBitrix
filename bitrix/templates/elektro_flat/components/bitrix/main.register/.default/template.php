@@ -56,14 +56,11 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
                     endif;
                     ShowError(implode("<br />", $arResult["ERRORS"]));
                 }
-			elseif($arResult["USE_EMAIL_CONFIRMATION"] === "Y"):
+			elseif($arResult["USE_EMAIL_CONFIRMATION"] === "Y" && !empty($_REQUEST["register_submit_button"])):
 				?>
-				<p><?
-                    $showMessageText = ShowNote(GetMessage('REGISTER_EMAIL_WILL_BE_SENT'));
-                    echo $showMessageText;
-                    ?></p>
+                <p><?echo ShowNote(GetMessage("REGISTER_EMAIL_WILL_BE_SENT"));?></p>
 			<?endif?>
-            <?if ($arResult["USE_EMAIL_CONFIRMATION"] === "N"):?>
+            <?if (empty($_REQUEST["register_submit_button"])):?>
 			<form method="post" action="<?=POST_FORM_ACTION_URI?>" name="regform" enctype="multipart/form-data">
 				<?
 				if($arResult["BACKURL"] <> ''):
