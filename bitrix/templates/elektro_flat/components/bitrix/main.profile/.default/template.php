@@ -1,5 +1,12 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
+<script type="text/javascript">
+    $( document ).ready(function() {
+        $.mask.definitions['h']='[0-9]';
+        $( "input[name*='UF_CARD_NUMBER").mask("64777hhhhhhh");
+    });
+</script>
+
 <?=ShowError($arResult["strProfileError"]);?>
 <?if($arResult['DATA_SAVED'] == 'Y')
 	echo ShowNote(GetMessage('PROFILE_DATA_SAVED'));?>
