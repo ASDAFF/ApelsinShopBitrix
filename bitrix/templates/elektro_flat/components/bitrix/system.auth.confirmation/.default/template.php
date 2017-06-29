@@ -2,7 +2,7 @@
 
 <div class="content-form confirm-form">
 	<div class="fields">
-		<div class="field"><?echo $arResult["MESSAGE_TEXT"]?></div>
+		<div class="field"><?echo ShowNote($arResult["MESSAGE_TEXT"])?></div>
 		<?switch($arResult["MESSAGE_CODE"]) {
 			case "E01":
 				break;

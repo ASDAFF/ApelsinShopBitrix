@@ -50,12 +50,12 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
 		<?else:?>
 			<?
 			if (count($arResult["ERRORS"]) > 0):
-				foreach ($arResult["ERRORS"] as $key => $error)
-					if (intval($key) == 0 && $key !== 0)
-						$arResult["ERRORS"][$key] = str_replace("#FIELD_NAME#", "&quot;".GetMessage("REGISTER_FIELD_".$key)."&quot;", $error);
-
-				ShowError(implode("<br />", $arResult["ERRORS"]));
-
+				foreach ($arResult["ERRORS"] as $key => $error) {
+                    if (intval($key) == 0 && $key !== 0):
+                        $arResult["ERRORS"][$key] = str_replace("#FIELD_NAME#", "&quot;" . GetMessage("REGISTER_FIELD_" . $key) . "&quot;", $error);
+                    endif;
+                    ShowError(implode("<br />", $arResult["ERRORS"]));
+                }
 			elseif($arResult["USE_EMAIL_CONFIRMATION"] === "Y"):
 				?>
 				<p><?
@@ -63,7 +63,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
                     echo $showMessageText;
                     ?></p>
 			<?endif?>
-            <?if (mb_strlen($showMessageText) < 1 || $showMessageText === null):?>
+            <?if ($arResult["USE_EMAIL_CONFIRMATION"] === "N"):?>
 			<form method="post" action="<?=POST_FORM_ACTION_URI?>" name="regform" enctype="multipart/form-data">
 				<?
 				if($arResult["BACKURL"] <> ''):
@@ -265,7 +265,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
 					</tr>
 					</tfoot>
 				</table>
-				<p><?echo $arResult["GROUP_POLICY"]["PASSWORD_REQUIREMENTS"];?></p>
+<!--				<p>--><?//echo $arResult["GROUP_POLICY"]["PASSWORD_REQUIREMENTS"];?><!--</p>-->
                 <p><span class="starrequired"></span><?=GetMessage("AUTH_REQ_INFO")?></p>
 				<p><span class="starrequired">*</span><?=GetMessage("AUTH_REQ")?></p>
 
