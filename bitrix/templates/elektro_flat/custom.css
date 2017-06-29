@@ -126,12 +126,27 @@ ul.TextList>li>p,
 ol.TextList>li>p {
     text-indent: 0;
 }
+ul.TextList li,
+ol.TextList li{
+    padding: 5px 0px;
+}
 ul.TextList li ul.TextList,
+ul.TextList li ol.TextList,
+ol.TextList li ul.TextList,
 ol.TextList li ol.TextList {
     list-style-type: none;
     margin-bottom: 0;
     padding-bottom: 0;
     margin-left: 20px;
+}
+ol.TextList li ul.TextList li {
+    padding: 0px 0px;
+}
+ul.TextList li ul.TextList li:last-child,
+ul.TextList li ol.TextList li:last-child,
+ol.TextList li ul.TextList li:last-child,
+ol.TextList li ol.TextList li:last-child {
+    padding-bottom: 0;
 }
 
 ul.dash {
