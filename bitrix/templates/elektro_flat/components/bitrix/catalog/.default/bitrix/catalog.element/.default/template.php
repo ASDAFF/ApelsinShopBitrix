@@ -1089,8 +1089,7 @@ endif;
 								</div>
                             <?endforeach;?>
                             <div class="catalog-detail-property-info-text">
-                                <div class="catalog-detail-property-info-text-element"><?=GetMessage("CATALOG_ELEMENT_PROPERTIES_INFO_TEXT_1")?></div>
-                                <div class="catalog-detail-property-info-text-element"><?=GetMessage("CATALOG_ELEMENT_PROPERTIES_INFO_TEXT_2")?></div>
+                                <div class="catalog-detail-property-info-text-element"><?=GetMessage("CATALOG_ELEMENT_PROPERTIES_INFO_TEXT")?></div>
                             </div>
                         <?endif;
 						/***OFFERS_PROPERTIES***/
