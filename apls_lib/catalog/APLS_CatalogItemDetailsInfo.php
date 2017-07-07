@@ -12,7 +12,7 @@ class APLS_CatalogItemDetailsInfo
     {
         if (
             !isset($property[self::FILLED_PRODUCT]["VALUE"]) ||
-            $property[self::PROMO_TEXT]["VALUE"] == "" ||
+            $property[self::FILLED_PRODUCT]["VALUE"] == "" ||
             !in_array($property[self::FILLED_PRODUCT]["VALUE"], self::YES_VALUE)
         ) {
             $this->generateHTML();
